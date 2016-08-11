@@ -46,14 +46,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" |" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qs8-Mc-mTJ">
-                                        <rect key="frame" x="99" y="361" width="11" height="23"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8n-jG-f3R">
-                                        <rect key="frame" x="119" y="361" width="36" height="23"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <rect key="frame" x="93" y="361" width="11" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -75,8 +69,22 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8n-jG-f3R">
+                                        <rect key="frame" x="107" y="363" width="36" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQj-Ih-ykr">
+                                        <rect key="frame" x="530" y="522" width="22" height="22"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="infoBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Gv-hi-ObZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.69803921568627447" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="qs8-Mc-mTJ" firstAttribute="top" secondItem="9h0-Qn-dYU" secondAttribute="bottom" constant="11" id="8Gf-o4-x0d"/>
@@ -87,17 +95,19 @@
                                     <constraint firstItem="1Hj-VK-Lk2" firstAttribute="leading" secondItem="XmB-K1-ZF6" secondAttribute="leading" constant="37" id="DCJ-xv-TqC"/>
                                     <constraint firstAttribute="trailing" secondItem="5fg-8p-g9g" secondAttribute="trailing" constant="30" id="EH1-NL-12w"/>
                                     <constraint firstItem="1Hj-VK-Lk2" firstAttribute="top" secondItem="Wvi-Y8-BmI" secondAttribute="bottom" constant="6" id="HSC-Cc-lKa"/>
-                                    <constraint firstItem="r8n-jG-f3R" firstAttribute="leading" secondItem="qs8-Mc-mTJ" secondAttribute="trailing" constant="9" id="IJZ-hd-l3Z"/>
+                                    <constraint firstItem="r8n-jG-f3R" firstAttribute="leading" secondItem="qs8-Mc-mTJ" secondAttribute="trailing" constant="3" id="IJZ-hd-l3Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="qQj-Ih-ykr" secondAttribute="trailing" constant="8" id="OzA-q2-R2u"/>
                                     <constraint firstItem="3AR-Jm-bnd" firstAttribute="leading" secondItem="XmB-K1-ZF6" secondAttribute="leading" constant="30" id="VNu-ys-FM5"/>
-                                    <constraint firstItem="qs8-Mc-mTJ" firstAttribute="leading" secondItem="Wvi-Y8-BmI" secondAttribute="trailing" constant="8" id="YPo-Re-o7S"/>
+                                    <constraint firstItem="qs8-Mc-mTJ" firstAttribute="leading" secondItem="Wvi-Y8-BmI" secondAttribute="trailing" constant="2" id="YPo-Re-o7S"/>
                                     <constraint firstItem="Wvi-Y8-BmI" firstAttribute="leading" secondItem="XmB-K1-ZF6" secondAttribute="leading" constant="37" id="auQ-qM-AZS"/>
+                                    <constraint firstAttribute="bottom" secondItem="qQj-Ih-ykr" secondAttribute="bottom" constant="8" id="cja-oD-HiZ"/>
                                     <constraint firstAttribute="trailing" secondItem="3AR-Jm-bnd" secondAttribute="trailing" constant="30" id="eGX-Xj-RMA"/>
                                     <constraint firstItem="XzC-AS-lyG" firstAttribute="top" secondItem="5fg-8p-g9g" secondAttribute="bottom" constant="8" id="eMU-tQ-J3O"/>
                                     <constraint firstItem="Wvi-Y8-BmI" firstAttribute="top" secondItem="9h0-Qn-dYU" secondAttribute="bottom" constant="8" id="m3K-MZ-Hrp"/>
                                     <constraint firstItem="9h0-Qn-dYU" firstAttribute="top" secondItem="3AR-Jm-bnd" secondAttribute="bottom" constant="8" symbolic="YES" id="oEq-OB-Izd"/>
                                     <constraint firstItem="3AR-Jm-bnd" firstAttribute="top" secondItem="XmB-K1-ZF6" secondAttribute="top" constant="14" id="pLl-Op-9fs"/>
                                     <constraint firstItem="3AR-Jm-bnd" firstAttribute="centerX" secondItem="XmB-K1-ZF6" secondAttribute="centerX" id="rPi-Vq-2I3"/>
-                                    <constraint firstItem="r8n-jG-f3R" firstAttribute="top" secondItem="9h0-Qn-dYU" secondAttribute="bottom" constant="11" id="tmn-yF-N2L"/>
+                                    <constraint firstItem="r8n-jG-f3R" firstAttribute="top" secondItem="9h0-Qn-dYU" secondAttribute="bottom" constant="13" id="tmn-yF-N2L"/>
                                     <constraint firstItem="9h0-Qn-dYU" firstAttribute="leading" secondItem="XmB-K1-ZF6" secondAttribute="leading" constant="30" id="xfc-xv-api"/>
                                     <constraint firstAttribute="trailing" secondItem="9h0-Qn-dYU" secondAttribute="trailing" constant="30" id="zGb-nl-RGO"/>
                                 </constraints>
@@ -144,7 +154,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="280" y="302"/>
+            <point key="canvasLocation" x="80" y="308"/>
         </scene>
     </scenes>
     <resources>

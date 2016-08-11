@@ -19,35 +19,72 @@ class ViewController: UIViewController {
     @IBOutlet weak var romLbl: UILabel!
     @IBOutlet weak var kanLbl: UILabel!
     
-    var vocabEng = ["Waterfall","WALL"]
-    var vocabJap = ["たき","かべ"]
-    var vocabRom = ["ta·ki","ka·be"]
-    var vocabKan = ["滝","壁"]
-    var vocabImages: [UIImage] = [UIImage(named: "waterfall.png")!,UIImage(named: "wall.png")!]
+     let vocab = Vocab();
 
+    
+     var randInt = 0
+     var vocabCount:UInt32 = 0
+     var randColor = Int(arc4random_uniform(4))
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
         
         colorView.layer.cornerRadius = 8
         colorView.clipsToBounds = true
         
-        japLbl.text = vocabJap[0]
-        engLbl.text = vocabEng[0]
-        romLbl.text = vocabRom[0]
-        kanLbl.text = vocabKan[0]
+        vocabCount = (UInt32)(vocab.vocabEng.count)
         
-        vocabImg.image = vocabImages[0]
+        print("Number of vocab words: \(vocabCount)")
+        print("Number of Images \(vocab.vocabImages.count)")
+        
+        randInt = Int(arc4random_uniform(vocabCount))//number of vocabcab words
+        
+        japLbl.text = vocab.vocabJap[randInt]
+        engLbl.text = vocab.vocabEng[randInt]
+        romLbl.text = vocab.vocabRom[randInt]
+        kanLbl.text = vocab.vocabKan[randInt]
+        
+        
+        colorView.backgroundColor = vocab.vocabColor[randColor]
+        
+        vocabImg.image = vocab.vocabImages[randInt]
+        
     }
     
 
     @IBAction func changeVocab(sender: AnyObject) {
         
+        randInt = Int(arc4random_uniform(vocabCount))
+        
+        japLbl.text = vocab.vocabJap[randInt]
+        engLbl.text = vocab.vocabEng[randInt]
+        romLbl.text = vocab.vocabRom[randInt]
+        kanLbl.text = vocab.vocabKan[randInt]
+        
+        randColor = Int(arc4random_uniform(4))
+        
+        colorView.backgroundColor = vocab.vocabColor[randColor]
+        
+        vocabImg.image = vocab.vocabImages[randInt]
+        
+        print(randInt)
+        
         
     }
     
+    
+    @IBAction func infoBtnPressed(sender: UIButton) {
+        let alertController = UIAlertController(title: "About Hibi", message: "Hibi (日々) which means daily in English, is an easy way to learn new Japanese vocabulary. This app was inspired by the Mainichi Chrome Extension, and it's just an MVP. More features and vocabulary will come soon with an update.\n \nMade with ❤️ by Brian Ramirez\n \nThanks for downloading!", preferredStyle: .Alert)
+        //We add buttons to the alert controller by creating UIAlertActions:
+        let actionOk = UIAlertAction(title: "よし！いくぞ！",
+                                     style: .Default,
+                                     handler: nil) //You can use a block here to handle a press on this button
+        
+        alertController.addAction(actionOk)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
